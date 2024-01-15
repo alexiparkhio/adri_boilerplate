@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { FromProvider } from "./components/shared/__providers__/FormProvider";
+import { MyForm } from "./MySubComponent";
 
 function App() {
+  const name = "Adria";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FromProvider>
+        <MyForm name={name} />
+      </FromProvider>
     </div>
   );
 }
